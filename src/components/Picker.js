@@ -1168,7 +1168,7 @@ function Picker({
 
         setValue(state => {
             if (multiple) {
-                let _state = state !== null ? [...state] : [];
+                let _state = state !== null && state !== undefined ? [...state] : [];
 
                 if (_state.includes(item[_schema.value])) {
                     // Remove the value
